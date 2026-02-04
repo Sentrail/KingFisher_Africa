@@ -1,0 +1,57 @@
+/* Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom color variables */
+@layer base {
+    :root {
+        --king-clay:   #C05621;
+        --king-green:  #2F5233;
+        --king-gold:   #D4AF37;
+        --king-cream:  #FFF8E1;
+        --king-dark:   #1A202C;
+    }
+}
+
+@layer components {
+    .text-king-clay   { color: var(--king-clay); }
+    .bg-king-clay     { background-color: var(--king-clay); }
+    .text-king-green  { color: var(--king-green); }
+    .bg-king-green    { background-color: var(--king-green); }
+    .text-king-gold   { color: var(--king-gold); }
+    .bg-king-gold     { background-color: var(--king-gold); }
+    .text-king-cream  { color: var(--king-cream); }
+    .bg-king-cream    { background-color: var(--king-cream); }
+    .text-king-dark   { color: var(--king-dark); }
+    .bg-king-dark     { background-color: var(--king-dark); }
+
+    .hover\:text-king-gold:hover  { color: var(--king-gold); }
+    .hover\:bg-king-clay:hover    { background-color: var(--king-clay); }
+}
+
+/* Custom utilities */
+@layer utilities {
+    .hero-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+                    url('https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .scroll-smooth {
+        scroll-behavior: smooth;
+    }
+
+    .btn-hover {
+        transition: all 0.3s ease;
+    }
+    .btn-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    }
+}
+
+/* Font families */
+.font-serif { font-family: 'Playfair Display', serif; }
+.font-sans  { font-family: 'Poppins', sans-serif; }
